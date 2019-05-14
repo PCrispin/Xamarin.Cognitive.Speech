@@ -313,6 +313,18 @@ var speechClient = new SpeechApiClient ("<YOUR KEY>", SpeechRegion.<YOUR SPEECH 
     new Endpoint ("myunique.host.stt.speech.microsoft.com", "/speech/recognition")); //STT endpoint
 ```
 
+Or with Custom Speech (as defined in https://speech.microsoft.com/portal):
+
+```c#
+var speechClient = new SpeechApiClient ("<YOUR KEY>", SpeechRegion.<YOUR SPEECH REGION>,
+    new Endpoint ("myunique.host.api.cognitive.microsoft.com", "/sts/v1.0/issueToken") //auth endpoint
+    new Endpoint ("myunique.host.stt.speech.microsoft.com", "/speech/recognition", "cid=<YOUR CUSTOM ENDPOINT ID>"))
+    {
+        RecognitionMode = RecognitionMode.Interactive,
+    }; //STT endpoint
+    //Note the interactive/cognitiveservices/v1 part of url are added by code presuming you set RecognitionMode = RecognitionMode.Interactive
+```
+
 If the endpoint(s) you're using do not require the speech region to prefix the url, you can specify this in the Endpoint creation by passing `false` for the `prefixWithRegion` parameter.
 	
 # Contributing
