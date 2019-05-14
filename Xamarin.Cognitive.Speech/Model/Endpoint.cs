@@ -45,6 +45,7 @@ namespace Xamarin.Cognitive.Speech
 		/// <param name="host">Host.</param>
 		/// <param name="port">Port.</param>
 		/// <param name="path">Path, including the leading '/'</param>
+		/// <param name="query">Query</param>
 		/// <param name="prefixWithRegion">If set to True, the speech region will prefix this endpoint, e.g. [Protocol]://centralus.[Host]:[Port]/[Path]?[Query]</param>
 		public Endpoint (string protocol, string host, int port, string path, bool prefixWithRegion = true)
 		{
@@ -62,6 +63,7 @@ namespace Xamarin.Cognitive.Speech
 		/// <param name="host">Host.</param>
 		/// <param name="port">Port.</param>
 		/// <param name="path">Path, including the leading '/'</param>
+		/// <param name="query">Query</param>
 		/// <param name="prefixWithRegion">If set to True, the speech region will prefix this endpoint, e.g. [Protocol]://centralus.[Host]:[Port]/[Path]?[Query]</param>
 		public Endpoint (string host, int port, string path, bool prefixWithRegion = true)
 		{
@@ -77,6 +79,7 @@ namespace Xamarin.Cognitive.Speech
 		/// </summary>
 		/// <param name="host">Host.</param>
 		/// <param name="path">Path, including the leading '/'</param>
+		/// <param name="query">Query</param>
 		/// <param name="prefixWithRegion">If set to True, the speech region will prefix this endpoint, e.g. [Protocol]://centralus.[Host]:[Port]/[Path]?[Query]</param>
 		public Endpoint (string host, string path, bool prefixWithRegion = true)
 		{
@@ -91,6 +94,7 @@ namespace Xamarin.Cognitive.Speech
 		/// </summary>
 		/// <param name="host">Host.</param>
 		/// <param name="path">Path, including the leading '/'</param>
+		/// <param name="query">Query</param>
 		/// <param name="prefixWithRegion">If set to True, the speech region will prefix this endpoint, e.g. [Protocol]://centralus.[Host]:[Port]/[Path]?[Query]</param>
 		public Endpoint (string host, string path, string query, bool prefixWithRegion = true)
 		{
